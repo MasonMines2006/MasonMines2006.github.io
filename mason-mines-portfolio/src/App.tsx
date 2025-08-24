@@ -1,20 +1,40 @@
-import React from "react";
-import Topbar from "./components/Topbar";
+import { Box } from "@chakra-ui/react";
 import Navbar from "./components/Navbar";
-import Homepage from "./components/Homepage";
-import { Button, HStack } from "@chakra-ui/react";
+import Introduction from "./components/Introduction";
+import About from "./components/About";
+import { useColorModeValue } from "./components/ui/color-mode";
+import Projects from "./components/Projects";
 
 const App = () => {
+  const text = useColorModeValue("Light", "Dark");
   return (
-    <div>
-      <Topbar />
-      <Navbar />
-      <Homepage />
-      <HStack>
-        <Button>Click me</Button>
-        <Button>Click me</Button>
-      </HStack>
-    </div>
+    <>
+      <Box
+        paddingX={10}
+        paddingY={2}
+        position="sticky"
+        borderBottom={"1px solid"}
+        top={0}
+        zIndex={1000}
+        bg={text == "Light" ? "white" : "black"}
+      >
+        <Navbar />
+      </Box>
+      <Box
+        display="flex"
+        flexDirection="column"
+        alignItems="center"
+        paddingX={10}
+        maxWidth="800px"
+        height="1200px"
+        margin="0 auto"
+        paddingY={10}
+      >
+        <Introduction />
+        <About />
+      </Box>
+      <Projects />
+    </>
   );
 };
 

@@ -1,32 +1,24 @@
-import React from "react";
+import { Box, HStack } from "@chakra-ui/react";
+import ThemeButton from "./ThemeButton";
+import Namecard from "./Namecard";
+import References from "./References";
 
 const Navbar = () => {
-  const genres: string[] = ["Action", "Adventure", "Indie", "RPG", "Strategy"];
-
-  const genre_items = genres.map((genre) => (
-    <li className="nav-item" key={genre}>
-      <div className="display-flex flex-row">
-        <a className="logo" href="#">
-          <img
-            src={"src/assets/" + genre + ".jpg"}
-            alt={genre}
-            width="40"
-            height="30"
-          />
-        </a>
-        <a className="nav-link active" aria-current="page" href="#">
-          {genre}
-        </a>
-      </div>
-    </li>
-  ));
-  const getMessage = () => genre_items;
-
   return (
-    <div>
-      <h1>Genres</h1>
-      <ul className="nav flex-column">{getMessage()}</ul>
-    </div>
+    <Box paddingX={10} position="sticky" top={0} zIndex={1000}>
+      <HStack
+        justifyContent="space-between"
+        alignItems="center"
+        paddingX={10}
+        padding={2}
+      >
+        <Namecard />
+        <HStack direction={"row"} gap={4} alignItems="center">
+          <References />
+          <ThemeButton />
+        </HStack>
+      </HStack>
+    </Box>
   );
 };
 

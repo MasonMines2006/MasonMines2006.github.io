@@ -9,10 +9,15 @@ const ProjectCard = ({ experience }: ProjectCardProps) => {
   const { title, description, link: viewLink, image } = experience;
   return (
     <Card.Root width="320px">
-      <Card.Body gap="2">
-        <Image src={image} alt="Alternate" />
+      <Card.Body gap="0">
+        <Image
+          src={image}
+          alt="Alternate"
+          borderRadius={"10px"}
+          height={"200px"}
+        />
         <Card.Title mt="2">{title ? title : "Empty Title"}</Card.Title>
-        <Card.Description>
+        <Card.Description alignContent={"center"}>
           {description ? description : "Empty Description"}
         </Card.Description>
       </Card.Body>

@@ -4,6 +4,7 @@ import Introduction from "./components/Introduction";
 import About from "./components/About";
 import { useColorModeValue } from "./components/ui/color-mode";
 import Projects from "./components/Projects";
+import ConstructionDrawer from "./components/ConstructionDrawer";
 
 const App = () => {
   const text = useColorModeValue("Light", "Dark");
@@ -34,6 +35,19 @@ const App = () => {
         <About />
       </Box>
       <Projects />
+
+      <Box
+        position="fixed"
+        bottom={4}
+        right={4}
+        zIndex={1100}
+        borderBottom="none"
+        bg={text == "Light" ? "white" : "black"}
+        borderRadius="md"
+        boxShadow="md"
+      >
+        <ConstructionDrawer />
+      </Box>
     </>
   );
 };

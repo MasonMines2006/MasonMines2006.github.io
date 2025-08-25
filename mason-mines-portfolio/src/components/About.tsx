@@ -1,12 +1,13 @@
 import { Box, Flex, Tabs, Text } from "@chakra-ui/react";
 import SkilsList from "./SkilsList";
 import Experience from "./Experience";
+import AboutMe from "./AboutMe";
 
 const About = () => {
   const items = [
     {
       title: "About Me",
-      content: "Dolore ex esse laboris elit magna esse sunt",
+      content: <AboutMe />,
     },
     {
       title: "Experience",
@@ -33,7 +34,7 @@ const About = () => {
         About
       </Text>
       <Flex minH="dvh">
-        <Tabs.Root defaultValue="1" width="full">
+        <Tabs.Root defaultValue="About Me" width="full">
           <Tabs.List>
             {items.map((item, index) => (
               <Tabs.Trigger key={index} value={item.title}>

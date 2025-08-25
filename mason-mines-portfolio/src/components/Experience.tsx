@@ -1,5 +1,5 @@
 import ProjectCard from "./ProjectCard";
-import { Box } from "@chakra-ui/react";
+import { Box, Grid } from "@chakra-ui/react";
 
 export interface Experience {
   title: string;
@@ -11,18 +11,28 @@ export interface Experience {
 const Experience = () => {
   const Experiences: Experience[] = [
     {
-      title: "Project 1",
-      description: "Description of Project 1",
-      link: "",
-      image: "",
+      title: "National Institute of Aviation Research",
+      description: "Description of NIAR",
+      link: "https://www.wichita.edu/industry_and_defense/NIAR/",
+      image: "/src/assets/NIAR_Campus.jpg",
+    },
+    {
+      title: "CS for Social Good",
+      description: "Description of CSSG",
+      link: "https://www.cssgunc.org/",
+      image: "/src/assets/CSSG-Full.jpeg",
     },
   ];
 
-  return Experiences.map((exp, index) => (
-    <Box key={index} margin={4}>
-      <ProjectCard experience={exp} />
-    </Box>
-  ));
+  return (
+    <Grid templateColumns="repeat(2, 2fr)" gap="2">
+      {Experiences.map((exp, index) => (
+        <Box key={index} margin={4}>
+          <ProjectCard experience={exp} />
+        </Box>
+      ))}
+    </Grid>
+  );
 };
 
 export default Experience;

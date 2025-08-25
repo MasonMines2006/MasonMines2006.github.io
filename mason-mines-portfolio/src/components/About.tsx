@@ -36,7 +36,7 @@ const About = () => {
         About
       </Text>
       <Flex minH="dvh">
-        <Tabs.Root defaultValue="About Me" width="full">
+        <Tabs.Root defaultValue="Skills" width="full">
           <Tabs.List>
             {items.map((item, index) => (
               <Tabs.Trigger key={index} value={item.title}>

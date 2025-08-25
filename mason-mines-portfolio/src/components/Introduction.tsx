@@ -16,7 +16,7 @@ const Introduction = () => {
         Mason Mines
       </Text>
       <Text textStyle="3xl" color="fg.muted" textAlign={"center"}>
-        UNC Honors Caorlina - Computer Science & Physics '28 - Research and Full
+        UNC Honors Carolina - Computer Science & Physics '28 - Research and Full
         Stack Development
       </Text>
 

@@ -28,7 +28,7 @@ const App = () => {
         alignItems="center"
         paddingX={10}
         maxWidth="800px"
-        height="1200px"
+        height="1300px"
         margin="0 auto"
         paddingY={10}
       >
@@ -59,7 +59,7 @@ const App = () => {
         borderRadius="md"
         boxShadow="md"
       >
-        <LilGuy />
+        <LilGuy action="" />
       </Box>
     </>
   );

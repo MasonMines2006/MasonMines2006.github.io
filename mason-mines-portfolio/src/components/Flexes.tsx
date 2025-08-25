@@ -7,10 +7,19 @@ interface FlexesProps {
 
 const Flexes = ({ main, sub }: FlexesProps) => {
   return (
-    <Box border="1px solid" padding={4} borderRadius="md">
-      <Stack>
-        <Text>{main}</Text>
-        <Text>{sub}</Text>
+    <Box
+      border="1px solid"
+      padding={4}
+      borderRadius="md"
+      backgroundColor={"bg.emphasized"}
+    >
+      <Stack alignContent={"center"} spaceY={1}>
+        <Text textAlign={"center"} fontWeight={"bold"} textStyle={"xl"}>
+          {main}
+        </Text>
+        <Text textAlign={"center"} textStyle={"lg"}>
+          {sub}
+        </Text>
       </Stack>
     </Box>
   );

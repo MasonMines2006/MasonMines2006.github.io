@@ -2,6 +2,7 @@ import { Box, Flex, Tabs, Text } from "@chakra-ui/react";
 import SkilsList from "./SkilsList";
 import Experience from "./Experience";
 import AboutMe from "./AboutMe";
+import Education from "./Education";
 
 const About = () => {
   const items = [
@@ -19,7 +20,7 @@ const About = () => {
     },
     {
       title: "Education",
-      content: "Dolore ex esse laboris elit magna esse sunt",
+      content: <Education />,
     },
   ];
   return (
@@ -42,7 +43,7 @@ const About = () => {
               </Tabs.Trigger>
             ))}
           </Tabs.List>
-          <Box pos="relative" minH="200px" width="700px">
+          <Box pos="relative" minH="150px" width="700px">
             {items.map((item, index) => (
               <Tabs.Content
                 key={index}
@@ -51,11 +52,11 @@ const About = () => {
                 inset="0"
                 _open={{
                   animationName: "fade-in, scale-in",
-                  animationDuration: "300ms",
+                  animationDuration: "700ms",
                 }}
                 _closed={{
                   animationName: "fade-out, scale-out",
-                  animationDuration: "120ms",
+                  animationDuration: "500ms",
                 }}
               >
                 {item.content}

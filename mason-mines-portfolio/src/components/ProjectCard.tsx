@@ -23,7 +23,7 @@ const ProjectCard = ({ experience }: ProjectCardProps) => {
       </Card.Body>
       <Card.Footer justifyContent="flex-end">
         <Link href={viewLink} textStyle="md" fontWeight="bold">
-          <Button variant="outline">View Project</Button>
+          <Button variant="outline">View Experience</Button>
         </Link>
       </Card.Footer>
     </Card.Root>

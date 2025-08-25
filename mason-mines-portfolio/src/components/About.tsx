@@ -7,20 +7,21 @@ import Education from "./Education";
 const About = () => {
   const items = [
     {
-      title: "About Me",
-      content: <AboutMe />,
+      title: "Skills",
+      content: <SkilsList />,
     },
     {
       title: "Experience",
       content: <Experience />,
     },
-    {
-      title: "Skills",
-      content: <SkilsList />,
-    },
+
     {
       title: "Education",
       content: <Education />,
+    },
+    {
+      title: "About Me",
+      content: <AboutMe />,
     },
   ];
   return (

@@ -6,6 +6,7 @@ import { useColorModeValue } from "./components/ui/color-mode";
 import Projects from "./components/Projects";
 import ConstructionDrawer from "./components/ConstructionDrawer";
 import LilGuy from "./components/LilGuy";
+import Connect from "./components/Connect";
 
 const App = () => {
   const text = useColorModeValue("Light", "Dark");
@@ -36,6 +37,18 @@ const App = () => {
         <About />
       </Box>
       <Projects />
+      <Box
+        display="flex"
+        flexDirection="column"
+        alignItems="center"
+        paddingX={10}
+        maxWidth="800px"
+        height="1300px"
+        margin="0 auto"
+        paddingY={10}
+      >
+        <Connect />
+      </Box>
 
       <Box
         position="fixed"

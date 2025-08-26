@@ -1,4 +1,12 @@
-import { Button, HStack, Icon, Link, Stack, Text } from "@chakra-ui/react";
+import {
+  Button,
+  DownloadTrigger,
+  HStack,
+  Icon,
+  Link,
+  Stack,
+  Text,
+} from "@chakra-ui/react";
 import {
   BsArrowBarRight,
   BsEnvelopePaperFill,
@@ -10,6 +18,10 @@ import {
 } from "react-icons/bs";
 
 const Introduction = () => {
+  const data = async () => {
+    const res = await fetch("/src/assets/resume.pdf");
+    return res.blob();
+  };
   return (
     <Stack align={"center"} spaceY={0} paddingY={20}>
       <Text textStyle="7xl" fontWeight="bold" textAlign={"center"}>
@@ -20,7 +32,7 @@ const Introduction = () => {
         Stack Development
       </Text>
 
-      <HStack spaceX={6} paddingTop={4}>
+      <HStack spaceX={6} paddingTop={4} paddingBottom={4}>
         <HStack>
           <Icon as={BsFillPinMapFill} color="gray.500" />
           <Text textStyle="md">Chapel Hill, NC</Text>
@@ -31,13 +43,13 @@ const Introduction = () => {
         </HStack>
         <HStack>
           <Link href="mailto:mmines@unc.edu">
-            <Icon as={BsMailbox2Flag} color="gray.500" />
+            <Icon as={BsMailbox2Flag} color="gray.500" size="md" />
           </Link>
           <Link href="https://github.com/MasonMines2006">
-            <Icon as={BsGithub} color="gray.500" />
+            <Icon as={BsGithub} color="gray.500" size="md" />
           </Link>
           <Link href="https://www.linkedin.com/in/masonmines2006">
-            <Icon as={BsLinkedin} color="gray.500" />
+            <Icon as={BsLinkedin} color="gray.500" size="md" />
           </Link>
         </HStack>
       </HStack>
@@ -45,9 +57,14 @@ const Introduction = () => {
         <Button asChild size="xl" background={"fg.info"}>
           <Link href="#">Projects {<BsArrowBarRight />}</Link>
         </Button>
-        <Button asChild size="xl">
-          <Link href="#">Resume {<BsFileEarmarkArrowDownFill />}</Link>
-        </Button>
+        <DownloadTrigger
+          data={data}
+          fileName="resume.pdf"
+          mimeType="application/pdf"
+          asChild
+        >
+          <Button size="xl">Resume {<BsFileEarmarkArrowDownFill />}</Button>
+        </DownloadTrigger>
       </HStack>
     </Stack>
   );

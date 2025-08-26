@@ -5,7 +5,8 @@ import {
   CloseButton,
   Text,
   Icon,
-  HStack,
+  Image,
+  Stack,
 } from "@chakra-ui/react";
 import { BsHammer } from "react-icons/bs";
 
@@ -13,7 +14,7 @@ const ConstructionDrawer = () => {
   return (
     <Drawer.Root>
       <Drawer.Trigger asChild>
-        <Button variant="solid" color="Info" size="sm">
+        <Button variant="solid" color="Info" size="md">
           <Icon as={BsHammer} boxSize={6} />
         </Button>
       </Drawer.Trigger>
@@ -25,7 +26,7 @@ const ConstructionDrawer = () => {
               <Drawer.Title>A Note about This Site</Drawer.Title>
             </Drawer.Header>
             <Drawer.Body>
-              <HStack>
+              <Stack display={"flex"} flex-direction={"column"} gap={4}>
                 <Text>
                   This site is currently under construction! I am actively
                   working on adding more projects, refining the design, and
@@ -34,7 +35,13 @@ const ConstructionDrawer = () => {
                   patience and understanding as I continue to enhance this
                   portfolio.
                 </Text>
-              </HStack>
+                <Image
+                  src="/src/assets/PeepoToSleep.gif"
+                  alt="Lil Guy"
+                  width="100%"
+                  height="auto"
+                />
+              </Stack>
             </Drawer.Body>
             <Drawer.CloseTrigger asChild>
               <CloseButton size="sm" />

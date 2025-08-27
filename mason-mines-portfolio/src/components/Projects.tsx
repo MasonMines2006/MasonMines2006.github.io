@@ -4,10 +4,11 @@ const Projects = () => {
   return (
     <Box
       paddingX={10}
-      paddingY={10}
+      paddingY={20}
       display={"flex"}
       flexDirection="column"
       alignItems="center"
+      id="projects"
     >
       <Stack marginTop={10} marginBottom={4}>
         <Text textStyle="6xl" fontWeight="bold" textAlign={"center"}>

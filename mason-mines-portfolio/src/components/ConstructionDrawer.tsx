@@ -36,7 +36,7 @@ const ConstructionDrawer = () => {
                   portfolio.
                 </Text>
                 <Image
-                  src="/src/assets/PeepoToSleep.gif"
+                  src="/public/PeepoToSleep.gif"
                   alt="Lil Guy"
                   width="100%"
                   height="auto"

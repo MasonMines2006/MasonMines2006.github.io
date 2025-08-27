@@ -26,11 +26,14 @@ const About = () => {
   ];
   return (
     <Box>
+      <Box id="about" boxSize={20}>
+        <Text> {"\n"}</Text>
+      </Box>
       <Text
         textStyle="6xl"
         fontWeight="bold"
         textAlign={"center"}
-        marginTop={10}
+        marginTop={35}
         marginBottom={4}
       >
         About

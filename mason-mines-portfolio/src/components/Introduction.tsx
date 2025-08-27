@@ -3,10 +3,11 @@ import {
   DownloadTrigger,
   HStack,
   Icon,
-  Link,
   Stack,
+  Link,
   Text,
 } from "@chakra-ui/react";
+import { Link as ScrollLink } from "react-scroll";
 import {
   BsArrowBarRight,
   BsEnvelopePaperFill,
@@ -19,7 +20,7 @@ import {
 
 const Introduction = () => {
   const data = async () => {
-    const res = await fetch("/src/assets/resume.pdf");
+    const res = await fetch("/public/resume.pdf");
     return res.blob();
   };
   return (
@@ -55,7 +56,10 @@ const Introduction = () => {
       </HStack>
       <HStack>
         <Button asChild size="xl" background={"fg.info"}>
-          <Link href="#">Projects {<BsArrowBarRight />}</Link>
+          <ScrollLink to="projects" smooth={true} duration={750}>
+            <Text>Projects</Text>
+            <BsArrowBarRight />
+          </ScrollLink>
         </Button>
         <DownloadTrigger
           data={data}

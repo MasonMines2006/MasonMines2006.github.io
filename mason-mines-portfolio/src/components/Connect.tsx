@@ -1,9 +1,14 @@
-import { Card, Grid, HStack, Icon, Link, Stack, Text } from "@chakra-ui/react";
-import { BsMailbox2Flag, BsGithub, BsLinkedin } from "react-icons/bs";
+import { Card, Grid, Icon, Link, Stack, Text } from "@chakra-ui/react";
+import {
+  BsMailbox2Flag,
+  BsGithub,
+  BsLinkedin,
+  BsAsterisk,
+} from "react-icons/bs";
 
 const Connect = () => {
   return (
-    <Stack align={"center"} spaceY={0} paddingY={20}>
+    <Stack align={"center"} spaceY={0} paddingTop={20} id="connect">
       <Text textStyle="6xl" fontWeight="bold" textAlign={"center"}>
         Connect
       </Text>
@@ -22,26 +27,54 @@ const Connect = () => {
             <Card.Title mt="2" paddingBottom={4} textStyle={"2xl"}>
               {"Where to Find Me"}
             </Card.Title>
-            <Card.Description alignContent={"center"} paddingBottom={20}>
+            <Card.Description as="div" alignContent="center" paddingBottom={10}>
               <Stack>
-                <HStack>
-                  <Link href="mailto:mmines@unc.edu">
-                    <Icon size={"lg"} as={BsMailbox2Flag} color="gray.500" />
-                  </Link>
-                  <Text textStyle={"xl"}>mmines@unc.edu</Text>
-                </HStack>
-                <HStack>
-                  <Link href="https://github.com/MasonMines2006">
-                    <Icon size={"lg"} as={BsGithub} color="gray.500" />
-                  </Link>
-                  <Text textStyle={"xl"}>Github</Text>
-                </HStack>
-                <HStack>
-                  <Link href="https://www.linkedin.com/in/masonmines2006">
-                    <Icon size={"lg"} as={BsLinkedin} color="gray.500" />
-                  </Link>
-                  <Text textStyle={"xl"}>Linked-In</Text>
-                </HStack>
+                <Grid
+                  templateColumns="40px 1fr"
+                  templateRows="auto auto"
+                  gap={2}
+                >
+                  <Grid gridColumn="1" gridRow="1">
+                    <Link href="mailto:mmines@unc.edu">
+                      <Icon
+                        boxSize={6}
+                        as={BsMailbox2Flag}
+                        color="bg.inverted"
+                      />
+                    </Link>
+                  </Grid>
+                  <Grid gridColumn="2" gridRow="1">
+                    <Text textStyle="xl">mmines@unc.edu</Text>
+                  </Grid>
+                </Grid>
+                <Grid
+                  templateColumns="40px 1fr"
+                  templateRows="auto auto"
+                  gap={2}
+                >
+                  <Grid gridColumn="1" gridRow="1">
+                    <Link href="https://github.com/MasonMines2006">
+                      <Icon boxSize={6} as={BsGithub} color="bg.inverted" />
+                    </Link>
+                  </Grid>
+                  <Grid gridColumn="2" gridRow="1">
+                    <Text textStyle="xl">Github</Text>
+                  </Grid>
+                </Grid>
+                <Grid
+                  templateColumns="40px 1fr"
+                  templateRows="auto auto"
+                  gap={2}
+                >
+                  <Grid gridColumn="1" gridRow="1">
+                    <Link href="https://www.linkedin.com/in/masonmines2006">
+                      <Icon boxSize={6} as={BsLinkedin} color="bg.inverted" />
+                    </Link>
+                  </Grid>
+                  <Grid gridColumn="2" gridRow="1">
+                    <Text textStyle="xl">Linked-In</Text>
+                  </Grid>
+                </Grid>
               </Stack>
             </Card.Description>
           </Card.Body>
@@ -51,26 +84,67 @@ const Connect = () => {
             <Card.Title mt="2" paddingBottom={4} textStyle={"2xl"}>
               {"My Approach"}
             </Card.Title>
-            <Card.Description alignContent={"center"}>
+            <Card.Description as="div" alignContent="center" paddingBottom={20}>
               <Stack>
-                <HStack>
-                  <Link href="mailto:mmines@unc.edu">
-                    <Icon size={"lg"} as={BsMailbox2Flag} color="gray.500" />
-                  </Link>
-                  <Text textStyle={"xl"}>mmines@unc.edu</Text>
-                </HStack>
-                <HStack>
-                  <Link href="https://github.com/MasonMines2006">
-                    <Icon size={"lg"} as={BsGithub} color="gray.500" />
-                  </Link>
-                  <Text textStyle={"xl"}>Github</Text>
-                </HStack>
-                <HStack>
-                  <Link href="https://www.linkedin.com/in/masonmines2006">
-                    <Icon size={"lg"} as={BsLinkedin} color="gray.500" />
-                  </Link>
-                  <Text textStyle={"xl"}>Linked-In</Text>
-                </HStack>
+                <Grid
+                  templateColumns="40px 1fr"
+                  templateRows="auto auto"
+                  gap={0.5}
+                >
+                  <Grid gridColumn="1" gridRow="1">
+                    <Icon boxSize={6} as={BsAsterisk} color="bg.inverted" />
+                  </Grid>
+                  <Grid gridColumn="2" gridRow="1">
+                    <Text textStyle="lg" color="bg.inverted">
+                      Curiosity
+                    </Text>
+                  </Grid>
+                  <Grid gridColumn="2" gridRow="2">
+                    <Text textStyle="lg">
+                      I love exploring new ideas and learning continuously.
+                    </Text>
+                  </Grid>
+                </Grid>
+                <Grid
+                  templateColumns="40px 1fr"
+                  templateRows="auto auto"
+                  gap={0.5}
+                >
+                  <Grid gridColumn="1" gridRow="1">
+                    <Icon boxSize={6} as={BsAsterisk} color="bg.inverted" />
+                  </Grid>
+                  <Grid gridColumn="2" gridRow="1">
+                    <Text textStyle="lg" color="bg.inverted">
+                      Self-Driven
+                    </Text>
+                  </Grid>
+                  <Grid gridColumn="2" gridRow="2">
+                    <Text textStyle="lg">
+                      I take initiative and ownership of projects from start to
+                      finish.
+                    </Text>
+                  </Grid>
+                </Grid>
+                <Grid
+                  templateColumns="40px 1fr"
+                  templateRows="auto auto"
+                  gap={0.5}
+                >
+                  <Grid gridColumn="1" gridRow="1">
+                    <Icon boxSize={6} as={BsAsterisk} color="bg.inverted" />
+                  </Grid>
+                  <Grid gridColumn="2" gridRow="1">
+                    <Text textStyle="lg" color="bg.inverted">
+                      Collaboration
+                    </Text>
+                  </Grid>
+                  <Grid gridColumn="2" gridRow="2">
+                    <Text textStyle="lg">
+                      I value teamwork and open communication to achieve the
+                      best results.
+                    </Text>
+                  </Grid>
+                </Grid>
               </Stack>
             </Card.Description>
           </Card.Body>

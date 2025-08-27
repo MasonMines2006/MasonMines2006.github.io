@@ -34,7 +34,9 @@ const App = () => {
         paddingY={10}
       >
         <Introduction />
-        <About />
+        <Box>
+          <About />
+        </Box>
       </Box>
       <Projects />
       <Box

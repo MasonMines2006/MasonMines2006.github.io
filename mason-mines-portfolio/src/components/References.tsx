@@ -1,17 +1,18 @@
-import { HStack, Link } from "@chakra-ui/react";
+import { HStack, Text } from "@chakra-ui/react";
+import { Link } from "react-scroll";
 
 const References = () => {
   return (
     <div>
       <HStack spaceX={4}>
-        <Link href="" textStyle="md" fontWeight="bold">
-          About
+        <Link to="about" smooth={true} duration={750}>
+          <Text>About</Text>
         </Link>
-        <Link href="" textStyle="md" fontWeight="bold">
-          Projects
+        <Link to="projects" smooth={true} duration={750}>
+          <Text>Projects</Text>
         </Link>
-        <Link href="" textStyle="md" fontWeight="bold">
-          Connect
+        <Link to="connect" smooth={true} duration={750}>
+          <Text>Connect</Text>
         </Link>
       </HStack>
     </div>

@@ -1,17 +1,17 @@
 import { Box } from "@chakra-ui/react";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar/Navbar";
 import Introduction from "./components/Introduction";
-import About from "./components/About";
+import About from "./components/About/About";
 import { useColorModeValue } from "./components/ui/color-mode";
-import Projects from "./components/Projects";
+import Projects from "./components/Projects/Projects";
 import ConstructionDrawer from "./components/ConstructionDrawer";
 import LilGuy from "./components/LilGuy";
-import Connect from "./components/Connect";
+import Connect from "./components/Connect/Connect";
 
 const App = () => {
   const text = useColorModeValue("Light", "Dark");
   return (
-    <>
+    <Box>
       <Box
         paddingX={10}
         paddingY={2}
@@ -29,16 +29,21 @@ const App = () => {
         alignItems="center"
         paddingX={10}
         maxWidth="800px"
-        height="1300px"
+        width="100%"
         margin="0 auto"
-        paddingY={10}
+        paddingTop={100}
+        height="auto"
+        minHeight="unset"
+        maxHeight="unset"
       >
         <Introduction />
-        <Box>
+        <Box width="100%" paddingTop={100}>
           <About />
         </Box>
       </Box>
-      <Projects />
+      <Box backgroundColor={"bg.info"}>
+        <Projects />
+      </Box>
       <Box
         display="flex"
         flexDirection="column"
@@ -76,7 +81,7 @@ const App = () => {
       >
         <LilGuy action="" />
       </Box>
-    </>
+    </Box>
   );
 };
 

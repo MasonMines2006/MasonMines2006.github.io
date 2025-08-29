@@ -1,5 +1,5 @@
 import { Accordion, Box, Grid, HStack, Span, Tag } from "@chakra-ui/react";
-import Flexes from "./Flexes";
+import Flexes from "../Flexes";
 
 const Education = () => {
   const items = [

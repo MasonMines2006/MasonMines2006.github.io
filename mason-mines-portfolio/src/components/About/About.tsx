@@ -14,7 +14,6 @@ const About = () => {
       title: "Experience",
       content: <Experience />,
     },
-
     {
       title: "Education",
       content: <Education />,
@@ -25,16 +24,15 @@ const About = () => {
     },
   ];
   return (
-    <Box>
-      <Box id="about" boxSize={20}>
-        <Text> {"\n"}</Text>
+    <Box id="about">
+      <Box id="about" marginBottom={40}>
+        <Text color={"bg"}>t</Text>
       </Box>
       <Text
         textStyle="6xl"
         fontWeight="bold"
         textAlign={"center"}
-        marginTop={35}
-        marginBottom={4}
+        marginBottom={10}
       >
         About
       </Text>
@@ -47,20 +45,17 @@ const About = () => {
               </Tabs.Trigger>
             ))}
           </Tabs.List>
-          <Box pos="relative" minH="150px" width="700px">
+          <Box minH="150px" width="700px" mx="auto">
             {items.map((item, index) => (
               <Tabs.Content
                 key={index}
                 value={item.title}
-                position="absolute"
-                inset="0"
                 _open={{
                   animationName: "fade-in, scale-in",
                   animationDuration: "700ms",
                 }}
                 _closed={{
-                  animationName: "fade-out, scale-out",
-                  animationDuration: "500ms",
+                  display: "none", // 👈 this hides inactive tabs instead of overlapping
                 }}
               >
                 {item.content}

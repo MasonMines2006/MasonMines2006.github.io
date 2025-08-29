@@ -14,7 +14,7 @@ const AboutMe = () => {
       <Box position="relative" width="100%" height="200px">
         {/* Background image */}
         <Image
-          src="/public/kansas.avif"
+          src="/kansas.avif"
           alt="Background"
           width="100%"
           height="200px"
@@ -24,7 +24,7 @@ const AboutMe = () => {
 
         {/* Profile image overlay */}
         <Image
-          src="/public/me.png"
+          src="/me.png"
           alt="My Photo"
           position="absolute"
           top="50%"

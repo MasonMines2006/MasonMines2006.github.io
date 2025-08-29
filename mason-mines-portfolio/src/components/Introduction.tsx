@@ -24,7 +24,7 @@ const Introduction = () => {
     return res.blob();
   };
   return (
-    <Stack align={"center"} spaceY={0} paddingY={20}>
+    <Stack align={"center"} spaceY={0} paddingBottom={20}>
       <Text textStyle="7xl" fontWeight="bold" textAlign={"center"}>
         Mason Mines
       </Text>

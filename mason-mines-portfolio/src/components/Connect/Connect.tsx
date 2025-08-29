@@ -72,7 +72,7 @@ const Connect = () => {
                     </Link>
                   </Grid>
                   <Grid gridColumn="2" gridRow="1">
-                    <Text textStyle="xl">Linked-In</Text>
+                    <Text textStyle="xl">LinkedIn</Text>
                   </Grid>
                 </Grid>
               </Stack>

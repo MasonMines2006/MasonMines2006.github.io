@@ -3,6 +3,14 @@ import { Stack, Text, Image, Box } from "@chakra-ui/react";
 const AboutMe = () => {
   return (
     <Stack>
+      <Text
+        textStyle="6xl"
+        fontWeight="bold"
+        textAlign={"center"}
+        marginBottom={5}
+      >
+        About
+      </Text>
       <Text textStyle="xl" textAlign={"center"} marginTop={4} marginBottom={2}>
         Honors Carolina student and Computer Science major at the University of
         North Carolina (Go Heels!). Currently improving my skills in front/back
@@ -14,7 +22,7 @@ const AboutMe = () => {
       <Box position="relative" width="100%" height="200px">
         {/* Background image */}
         <Image
-          src="/public/kansas.avif"
+          src="/kansas.avif"
           alt="Background"
           width="100%"
           height="200px"
@@ -24,7 +32,7 @@ const AboutMe = () => {
 
         {/* Profile image overlay */}
         <Image
-          src="/public/me.png"
+          src="/me.png"
           alt="My Photo"
           position="absolute"
           top="50%"

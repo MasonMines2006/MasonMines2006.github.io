@@ -1,10 +1,10 @@
 import { Box, Flex, Tabs, Text } from "@chakra-ui/react";
 import SkilsList from "./SkilsList";
-import Experience from "./Experience";
-import AboutMe from "./AboutMe";
+import Experience from "./Work";
 import Education from "./Education";
+import CampusAct from "./CampusAct";
 
-const About = () => {
+const Expieriences = () => {
   const items = [
     {
       title: "Skills",
@@ -14,29 +14,27 @@ const About = () => {
       title: "Experience",
       content: <Experience />,
     },
-
     {
       title: "Education",
       content: <Education />,
     },
     {
-      title: "About Me",
-      content: <AboutMe />,
+      title: "Campus Activity",
+      content: <CampusAct />,
     },
   ];
   return (
-    <Box>
-      <Box id="about" boxSize={20}>
-        <Text> {"\n"}</Text>
+    <Box id="Expieriences">
+      <Box id="Expieriences" marginBottom={40}>
+        <Text color={"bg"}>t</Text>
       </Box>
       <Text
         textStyle="6xl"
         fontWeight="bold"
         textAlign={"center"}
-        marginTop={35}
-        marginBottom={4}
+        marginBottom={10}
       >
-        About
+        Expieriences
       </Text>
       <Flex minH="dvh">
         <Tabs.Root defaultValue="Skills" width="full">
@@ -47,20 +45,17 @@ const About = () => {
               </Tabs.Trigger>
             ))}
           </Tabs.List>
-          <Box pos="relative" minH="150px" width="700px">
+          <Box minH="150px" width="700px" mx="auto">
             {items.map((item, index) => (
               <Tabs.Content
                 key={index}
                 value={item.title}
-                position="absolute"
-                inset="0"
                 _open={{
                   animationName: "fade-in, scale-in",
                   animationDuration: "700ms",
                 }}
                 _closed={{
-                  animationName: "fade-out, scale-out",
-                  animationDuration: "500ms",
+                  display: "none", // 👈 this hides inactive tabs instead of overlapping
                 }}
               >
                 {item.content}
@@ -73,4 +68,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Expieriences;

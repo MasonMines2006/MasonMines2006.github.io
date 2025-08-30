@@ -1,22 +1,22 @@
 import { Box, Flex, Tabs, Text } from "@chakra-ui/react";
 import SkilsList from "./SkilsList";
-import Experience from "./Work";
 import Education from "./Education";
-import CampusAct from "./CampusAct";
+import CampusAct from "./Activities";
+import Work from "./Work";
 
-const Expieriences = () => {
+const Experiences = () => {
   const items = [
+    {
+      title: "Education",
+      content: <Education />,
+    },
     {
       title: "Skills",
       content: <SkilsList />,
     },
     {
-      title: "Experience",
-      content: <Experience />,
-    },
-    {
-      title: "Education",
-      content: <Education />,
+      title: "Work and Research",
+      content: <Work />,
     },
     {
       title: "Campus Activity",
@@ -24,8 +24,8 @@ const Expieriences = () => {
     },
   ];
   return (
-    <Box id="Expieriences">
-      <Box id="Expieriences" marginBottom={40}>
+    <Box id="experiences">
+      <Box marginBottom={20}>
         <Text color={"bg"}>t</Text>
       </Box>
       <Text
@@ -34,9 +34,9 @@ const Expieriences = () => {
         textAlign={"center"}
         marginBottom={10}
       >
-        Expieriences
+        Experiences
       </Text>
-      <Flex minH="dvh">
+      <Flex padding={10}>
         <Tabs.Root defaultValue="Skills" width="full">
           <Tabs.List>
             {items.map((item, index) => (
@@ -68,4 +68,4 @@ const Expieriences = () => {
   );
 };
 
-export default Expieriences;
+export default Experiences;

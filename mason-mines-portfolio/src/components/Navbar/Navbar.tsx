@@ -1,4 +1,4 @@
-import { Box, HStack } from "@chakra-ui/react";
+import { Box, HStack, Text } from "@chakra-ui/react";
 import ThemeButton from "./ThemeButton";
 import Namecard from "./Namecard";
 import References from "./References";

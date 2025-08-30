@@ -5,8 +5,8 @@ const References = () => {
   return (
     <div>
       <HStack spaceX={4}>
-        <Link to="about" smooth={true} duration={750}>
-          <Text>About</Text>
+        <Link to="experiences" smooth={true} duration={750}>
+          <Text>Experiences</Text>
         </Link>
         <Link to="projects" smooth={true} duration={750}>
           <Text>Projects</Text>

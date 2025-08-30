@@ -20,7 +20,7 @@ import {
 
 const Introduction = () => {
   const data = async () => {
-    const res = await fetch("/public/resume.pdf");
+    const res = await fetch("/resume.pdf");
     return res.blob();
   };
   return (

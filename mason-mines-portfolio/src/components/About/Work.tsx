@@ -25,14 +25,6 @@ const Work = () => {
       link: "https://www.wichita.edu/industry_and_defense/NIAR/",
       image: "/NIAR_Campus.jpg",
     },
-
-    {
-      title: "CS for Social Good",
-      description:
-        "CS + Social Good is a student organization dedicated to using our technical skills, time, and resources to make a positive impact on our campus, in our community, and in the world.",
-      link: "https://www.cssgunc.org/",
-      image: "/CSSG-Full.jpeg",
-    },
   ];
 
   return (

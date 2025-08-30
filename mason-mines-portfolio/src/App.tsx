@@ -1,7 +1,7 @@
-import { Box } from "@chakra-ui/react";
+import { Box, Text } from "@chakra-ui/react";
 import Navbar from "./components/Navbar/Navbar";
 import Introduction from "./components/Introduction";
-import About from "./components/About/Expieriences";
+import Experiences from "./components/About/Experiences";
 import AboutMe from "./components/About/AboutMe";
 import { useColorModeValue } from "./components/ui/color-mode";
 import Projects from "./components/Projects/Projects";
@@ -25,21 +25,18 @@ const App = () => {
         <Navbar />
       </Box>
       <Box
-        display="flex"
-        flexDirection="column"
-        alignItems="center"
         paddingX={10}
         maxWidth="800px"
         width="100%"
         margin="0 auto"
-        paddingTop={100}
+        paddingY={50}
         height="auto"
         minHeight="unset"
         maxHeight="unset"
       >
         <Introduction />
       </Box>
-      <Box backgroundColor="bg.info">
+      <Box backgroundColor="bg.subtle" paddingTop={10} paddingBottom={20}>
         <Box
           display="flex"
           flexDirection="column"
@@ -48,7 +45,6 @@ const App = () => {
           maxWidth="800px"
           width="100%"
           margin="0 auto"
-          paddingTop={100}
           height="auto"
           minHeight="unset"
           maxHeight="unset"
@@ -64,15 +60,14 @@ const App = () => {
         maxWidth="800px"
         width="100%"
         margin="0 auto"
-        paddingTop={100}
         height="auto"
         minHeight="unset"
         maxHeight="unset"
       >
-        <About />
+        <Experiences />
       </Box>
 
-      <Box backgroundColor={"bg.info"}>
+      <Box backgroundColor={"bg.muted"}>
         <Projects />
       </Box>
       <Box

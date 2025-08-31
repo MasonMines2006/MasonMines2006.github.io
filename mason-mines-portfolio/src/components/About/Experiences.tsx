@@ -7,17 +7,14 @@ import Work from "./Work";
 const Experiences = () => {
   const items = [
     {
-<<<<<<<< HEAD:mason-mines-portfolio/src/components/About/Experiences.tsx
-========
       title: "Skills",
       content: <SkilsList />,
     },
     {
       title: "Experience",
-      content: <Experience />,
+      content: <Experiences />,
     },
     {
->>>>>>>> 5f84b8bb14a6198dd1aa61c3f4f6488985f7647c:mason-mines-portfolio/src/components/About/About.tsx
       title: "Education",
       content: <Education />,
     },
@@ -35,51 +32,48 @@ const Experiences = () => {
     },
   ];
   return (
-<<<<<<<< HEAD:mason-mines-portfolio/src/components/About/Experiences.tsx
     <Box id="experiences">
-      <Box marginBottom={20}>
-========
-    <Box id="about">
-      <Box id="about" marginBottom={40}>
->>>>>>>> 5f84b8bb14a6198dd1aa61c3f4f6488985f7647c:mason-mines-portfolio/src/components/About/About.tsx
-        <Text color={"bg"}>t</Text>
+      <Box id="about">
+        <Box id="about" marginBottom={40}>
+          <Text color={"bg"}>t</Text>
+        </Box>
+        <Text
+          textStyle="6xl"
+          fontWeight="bold"
+          textAlign={"center"}
+          marginBottom={10}
+        >
+          Experiences
+        </Text>
+        <Flex padding={10}>
+          <Tabs.Root defaultValue="Skills" width="full">
+            <Tabs.List>
+              {items.map((item, index) => (
+                <Tabs.Trigger key={index} value={item.title}>
+                  {item.title}
+                </Tabs.Trigger>
+              ))}
+            </Tabs.List>
+            <Box minH="150px" width="700px" mx="auto">
+              {items.map((item, index) => (
+                <Tabs.Content
+                  key={index}
+                  value={item.title}
+                  _open={{
+                    animationName: "fade-in, scale-in",
+                    animationDuration: "700ms",
+                  }}
+                  _closed={{
+                    display: "none", // 👈 this hides inactive tabs instead of overlapping
+                  }}
+                >
+                  {item.content}
+                </Tabs.Content>
+              ))}
+            </Box>
+          </Tabs.Root>
+        </Flex>
       </Box>
-      <Text
-        textStyle="6xl"
-        fontWeight="bold"
-        textAlign={"center"}
-        marginBottom={10}
-      >
-        Experiences
-      </Text>
-      <Flex padding={10}>
-        <Tabs.Root defaultValue="Skills" width="full">
-          <Tabs.List>
-            {items.map((item, index) => (
-              <Tabs.Trigger key={index} value={item.title}>
-                {item.title}
-              </Tabs.Trigger>
-            ))}
-          </Tabs.List>
-          <Box minH="150px" width="700px" mx="auto">
-            {items.map((item, index) => (
-              <Tabs.Content
-                key={index}
-                value={item.title}
-                _open={{
-                  animationName: "fade-in, scale-in",
-                  animationDuration: "700ms",
-                }}
-                _closed={{
-                  display: "none", // 👈 this hides inactive tabs instead of overlapping
-                }}
-              >
-                {item.content}
-              </Tabs.Content>
-            ))}
-          </Box>
-        </Tabs.Root>
-      </Flex>
     </Box>
   );
 };

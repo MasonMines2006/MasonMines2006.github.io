@@ -1,15 +1,8 @@
-<<<<<<< HEAD
-import { Box, Text } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import Navbar from "./components/Navbar/Navbar";
 import Introduction from "./components/Introduction";
 import Experiences from "./components/About/Experiences";
 import AboutMe from "./components/About/AboutMe";
-=======
-import { Box } from "@chakra-ui/react";
-import Navbar from "./components/Navbar/Navbar";
-import Introduction from "./components/Introduction";
-import About from "./components/About/About";
->>>>>>> 5f84b8bb14a6198dd1aa61c3f4f6488985f7647c
 import { useColorModeValue } from "./components/ui/color-mode";
 import Projects from "./components/Projects/Projects";
 import ConstructionDrawer from "./components/ConstructionDrawer";
@@ -67,31 +60,16 @@ const App = () => {
         maxWidth="800px"
         width="100%"
         margin="0 auto"
-<<<<<<< HEAD
-=======
-        paddingTop={100}
->>>>>>> 5f84b8bb14a6198dd1aa61c3f4f6488985f7647c
         height="auto"
         minHeight="unset"
         maxHeight="unset"
       >
-<<<<<<< HEAD
         <Experiences />
       </Box>
 
       <Box backgroundColor={"bg.muted"}>
         <Projects />
       </Box>
-=======
-        <Introduction />
-        <Box width="100%" paddingTop={100}>
-          <About />
-        </Box>
-      </Box>
-      <Box backgroundColor={"bg.info"}>
-        <Projects />
-      </Box>
->>>>>>> 5f84b8bb14a6198dd1aa61c3f4f6488985f7647c
       <Box
         display="flex"
         flexDirection="column"

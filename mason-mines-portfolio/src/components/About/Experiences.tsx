@@ -7,17 +7,6 @@ import Work from "./Work";
 const Experiences = () => {
   const items = [
     {
-<<<<<<<< HEAD:mason-mines-portfolio/src/components/About/Experiences.tsx
-========
-      title: "Skills",
-      content: <SkilsList />,
-    },
-    {
-      title: "Experience",
-      content: <Experience />,
-    },
-    {
->>>>>>>> 5f84b8bb14a6198dd1aa61c3f4f6488985f7647c:mason-mines-portfolio/src/components/About/About.tsx
       title: "Education",
       content: <Education />,
     },
@@ -35,13 +24,8 @@ const Experiences = () => {
     },
   ];
   return (
-<<<<<<<< HEAD:mason-mines-portfolio/src/components/About/Experiences.tsx
-    <Box id="experiences">
-      <Box marginBottom={20}>
-========
     <Box id="about">
       <Box id="about" marginBottom={40}>
->>>>>>>> 5f84b8bb14a6198dd1aa61c3f4f6488985f7647c:mason-mines-portfolio/src/components/About/About.tsx
         <Text color={"bg"}>t</Text>
       </Box>
       <Text

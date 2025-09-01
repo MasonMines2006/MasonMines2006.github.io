@@ -1,5 +1,6 @@
 import { Box, Stack, Text } from "@chakra-ui/react";
-import FrequencyGraph from "./FrequencyGraph";
+import FreqGraphDisplay from "./FreqGraphDisplay";
+import ProjectList from "./ProjectList";
 
 const Projects = () => {
   return (
@@ -11,7 +12,7 @@ const Projects = () => {
       alignItems="center"
       id="projects"
     >
-      <Stack marginTop={10} marginBottom={4}>
+      <Stack marginTop={2} marginBottom={4}>
         <Text textStyle="6xl" fontWeight="bold" textAlign={"center"}>
           Projects
         </Text>
@@ -23,7 +24,8 @@ const Projects = () => {
         >
           Blah blah blha, description, yaddah yaddah.
         </Text>
-        <FrequencyGraph />
+        <FreqGraphDisplay />
+        <ProjectList />
       </Stack>
     </Box>
   );

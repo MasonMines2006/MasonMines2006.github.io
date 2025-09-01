@@ -1,27 +1,31 @@
-export type Day = {
-  date: string;
-  contributionCount: number;
-  color: string;
-};
+export type Day = { date: string; contributionCount: number; color: string };
 
-const query = `
-query {
-  user(login: "MasonMines2006") {
-    contributionsCollection {
-      contributionCalendar {
-        weeks {
-          contributionDays {
-            date
-            contributionCount
-            color
+export async function fetchGitHubContributions(
+  token: string,
+  year: number,
+  username: string
+): Promise<Day[]> {
+  const from = `${year}-01-01T00:00:00Z`;
+  const to = `${year}-12-31T23:59:59Z`;
+
+  const query = `
+    query {
+      user(login: "${username}") {
+        contributionsCollection(from: "${from}", to: "${to}") {
+          contributionCalendar {
+            weeks {
+              contributionDays {
+                date
+                contributionCount
+                color
+              }
+            }
           }
         }
       }
     }
-  }
-}`;
+  `;
 
-export const fetchGitHubContributions = async (token: string): Promise<Day[]> => {
   const res = await fetch("https://api.github.com/graphql", {
     method: "POST",
     headers: {
@@ -33,10 +37,12 @@ export const fetchGitHubContributions = async (token: string): Promise<Day[]> =>
 
   const data = await res.json();
 
-  if (!data.data) {
-    throw new Error("Failed to fetch contributions");
+  if (!data.data?.user) {
+    console.error("GitHub API error:", data);
+    throw new Error("User not found or contributions unavailable");
   }
 
-  const weeks = data.data.user.contributionsCollection.contributionCalendar.weeks;
+  const weeks =
+    data.data.user.contributionsCollection.contributionCalendar.weeks;
   return weeks.flatMap((week: any) => week.contributionDays);
-};
+}

@@ -1,6 +1,11 @@
 import { Box } from "@chakra-ui/react";
 import Navbar from "./components/Navbar/Navbar";
 import Introduction from "./components/Introduction";
+import Experiences from "./components/About/Experiences";
+import AboutMe from "./components/About/AboutMe";
+import { Box } from "@chakra-ui/react";
+import Navbar from "./components/Navbar/Navbar";
+import Introduction from "./components/Introduction";
 import AboutMe from "./components/About/AboutMe";
 import { useColorModeValue } from "./components/ui/color-mode";
 import Projects from "./components/Projects/Projects";

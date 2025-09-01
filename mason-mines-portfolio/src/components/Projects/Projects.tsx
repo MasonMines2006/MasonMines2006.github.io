@@ -1,4 +1,5 @@
 import { Box, Stack, Text } from "@chakra-ui/react";
+import FrequencyGraph from "./FrequencyGraph";
 
 const Projects = () => {
   return (
@@ -22,6 +23,7 @@ const Projects = () => {
         >
           Blah blah blha, description, yaddah yaddah.
         </Text>
+        <FrequencyGraph />
       </Stack>
     </Box>
   );

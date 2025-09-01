@@ -1,4 +1,4 @@
-import { Box } from "@chakra-ui/react";
+import { Box, Text } from "@chakra-ui/react";
 import Experiences from "./components/About/About";
 import AboutMe from "./components/About/AboutMe";
 import Connect from "./components/Connect/Connect";
@@ -20,23 +20,28 @@ const App = () => {
         borderBottom={"1px solid"}
         top={0}
         zIndex={1000}
-        bg={text == "Light" ? "white" : "black"}
+        background={"bg"}
       >
         <Navbar />
       </Box>
-      <Box
-        paddingX={10}
-        maxWidth="800px"
-        width="100%"
-        margin="0 auto"
-        paddingY={50}
-        height="auto"
-        minHeight="unset"
-        maxHeight="unset"
-      >
-        <Introduction />
+      <Text id="introduction" color={"bg"} paddingBottom={2}>
+        f
+      </Text>
+      <Box>
+        <Box
+          paddingX={10}
+          maxWidth="800px"
+          width="100%"
+          margin="0 auto"
+          paddingY={50}
+          height="auto"
+          minHeight="unset"
+          maxHeight="unset"
+        >
+          <Introduction />
+        </Box>
       </Box>
-      <Box backgroundColor="bg.subtle" paddingTop={10} paddingBottom={20}>
+      <Box paddingTop={10} paddingBottom={20} backgroundColor={"bg.emphasized"}>
         <Box
           display="flex"
           flexDirection="column"
@@ -67,7 +72,7 @@ const App = () => {
         <Experiences />
       </Box>
 
-      <Box backgroundColor={"bg.muted"}>
+      <Box backgroundColor={"bg.emphasized"}>
         <Projects />
       </Box>
       <Box

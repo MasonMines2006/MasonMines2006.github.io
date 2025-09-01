@@ -22,7 +22,7 @@ const Connect = () => {
         researcher, or just want to say hi, feel free to reach out below.
       </Text>
       <Grid templateColumns="repeat(2, 2fr)" gap="10">
-        <Card.Root width="320px">
+        <Card.Root width="320px" background={"bg.info"}>
           <Card.Body gap="0">
             <Card.Title mt="2" paddingBottom={4} textStyle={"2xl"}>
               {"Where to Find Me"}
@@ -79,8 +79,13 @@ const Connect = () => {
             </Card.Description>
           </Card.Body>
         </Card.Root>
-        <Card.Root width="320px">
-          <Card.Body gap="0">
+        <Card.Root
+          width="320px"
+          colorPalette="teal"
+          variant="outline"
+          background={"bg.info"}
+        >
+          <Card.Body gap="0" colorPalette="teal">
             <Card.Title mt="2" paddingBottom={4} textStyle={"2xl"}>
               {"My Approach"}
             </Card.Title>

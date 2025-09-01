@@ -24,10 +24,7 @@ const Experiences = () => {
     },
   ];
   return (
-    <Box id="about">
-      <Box id="about" marginBottom={40}>
-        <Text color={"bg"}>t</Text>
-      </Box>
+    <Box marginY={10}>
       <Text
         textStyle="6xl"
         fontWeight="bold"

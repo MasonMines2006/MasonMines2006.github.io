@@ -19,7 +19,7 @@ const ActivityCard = ({ activity }: ActivityCardProps) => {
   const new_title = title ? title : "Empty Title";
   const new_description = description ? description : "Empty Description";
   return (
-    <Card.Root width="700px">
+    <Card.Root width="700px" colorPalette={"teal"} variant="elevated">
       <Card.Body gap="0">
         <Stack justifyContent="space-between" alignItems={"center"}>
           <Image
@@ -43,7 +43,7 @@ const ActivityCard = ({ activity }: ActivityCardProps) => {
           text={involvement}
         ></DialogBox>
         <Link href={viewLink} textStyle="md" fontWeight="bold">
-          <Button variant="outline">Go To Site</Button>
+          <Button variant="solid">Go To Site</Button>
         </Link>
       </Card.Footer>
     </Card.Root>

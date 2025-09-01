@@ -15,7 +15,7 @@ interface ActivityCardProps {
 }
 
 const ActivityCard = ({ activity }: ActivityCardProps) => {
-  const { title, description, link: viewLink, image } = activity;
+  const { title, description, involvement, link: viewLink, image } = activity;
   const new_title = title ? title : "Empty Title";
   const new_description = description ? description : "Empty Description";
   return (
@@ -32,15 +32,15 @@ const ActivityCard = ({ activity }: ActivityCardProps) => {
             {new_title}
           </Card.Title>
           <HStack>
-            <Text textAlign={"center"}>{description}</Text>
+            <Text textAlign={"center"}>{new_description}</Text>
           </HStack>
         </Stack>
       </Card.Body>
       <Card.Footer justifyContent="space-between" alignItems={"center"}>
         <DialogBox
           title={new_title}
-          buttonText="Description"
-          text={new_description}
+          buttonText="Involvement"
+          text={involvement}
         ></DialogBox>
         <Link href={viewLink} textStyle="md" fontWeight="bold">
           <Button variant="outline">Go To Site</Button>

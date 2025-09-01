@@ -15,6 +15,7 @@ export interface Activity {
   title: string;
   value: string;
   description: string;
+  involvement: string;
   link: string;
   image: string;
 }
@@ -27,8 +28,9 @@ const Activities = () => {
       icon: <RiCodeSSlashLine />,
       description:
         "UNC’s annual hackathon where students team up to build innovative tech projects in just 24 hours.",
-      link: "",
-      image: "",
+      involvement: "Participant",
+      link: "https://hacknc.com/",
+      image: "/HackNC.png",
     },
     {
       value: "cdc",
@@ -36,8 +38,9 @@ const Activities = () => {
       icon: <RiBarChart2Line />,
       description:
         "A campus-wide data science hackathon focused on solving real-world problems using datasets from industry and academia.",
-      link: "",
-      image: "",
+      involvement: "Participant",
+      link: "https://cdc.cs.unc.edu/",
+      image: "/CDC.png",
     },
     {
       value: "cssg",
@@ -45,8 +48,9 @@ const Activities = () => {
       icon: <RiGroupLine />,
       description:
         "A student organization applying computer science skills to projects that benefit local and global communities.",
-      link: "",
-      image: "",
+      involvement: "Participant",
+      link: "https://www.cssgunc.org/",
+      image: "/CSSG.jpeg",
     },
     {
       value: "taekwondo",
@@ -54,8 +58,9 @@ const Activities = () => {
       icon: <RiSwordLine />,
       description:
         "The UNC Taekwondo club promotes physical fitness, self-defense, and community through martial arts practice.",
-      link: "",
-      image: "",
+      involvement: "Participant",
+      link: "https://heellife.unc.edu/organization/taekwondo",
+      image: "/Taekwondo.jpeg",
     },
     {
       value: "quantum",
@@ -63,8 +68,9 @@ const Activities = () => {
       icon: <BsRocketTakeoff />,
       description:
         "A club for students interested in exploring the principles and applications of quantum computing and quantum information science.",
-      link: "",
-      image: "",
+      involvement: "Participant",
+      link: "https://sites.google.com/view/uncqc",
+      image: "/Quantum.jpeg",
     },
   ];
 

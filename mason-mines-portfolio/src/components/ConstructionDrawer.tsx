@@ -28,12 +28,11 @@ const ConstructionDrawer = () => {
             <Drawer.Body>
               <Stack display={"flex"} flex-direction={"column"} gap={4}>
                 <Text>
-                  This site is currently under construction! I am actively
-                  working on adding more projects, refining the design, and
-                  improving the overall user experience. Please check back soon
-                  to see the latest updates and features. Thank you for your
-                  patience and understanding as I continue to enhance this
-                  portfolio.
+                  This site is currently under construction! I make this
+                  portfolio from scratch in React with minimal AI usage, as this
+                  portfolio is as much a space for me to develop my full-stack
+                  skills as it is a place to view my final projects. Please
+                  excuse the mess!
                 </Text>
                 <Image
                   src="/public/PeepoToSleep.gif"

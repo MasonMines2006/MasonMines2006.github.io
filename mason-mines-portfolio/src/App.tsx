@@ -1,18 +1,13 @@
 import { Box } from "@chakra-ui/react";
-import Navbar from "./components/Navbar/Navbar";
-import Introduction from "./components/Introduction";
-import Experiences from "./components/About/Experiences";
-import AboutMe from "./components/About/AboutMe";
-import { Box } from "@chakra-ui/react";
-import Navbar from "./components/Navbar/Navbar";
-import Introduction from "./components/Introduction";
-import AboutMe from "./components/About/AboutMe";
-import { useColorModeValue } from "./components/ui/color-mode";
-import Projects from "./components/Projects/Projects";
-import ConstructionDrawer from "./components/ConstructionDrawer";
-import LilGuy from "./components/LilGuy";
-import Connect from "./components/Connect/Connect";
 import Experiences from "./components/About/About";
+import AboutMe from "./components/About/AboutMe";
+import Connect from "./components/Connect/Connect";
+import ConstructionDrawer from "./components/ConstructionDrawer";
+import Introduction from "./components/Introduction";
+import LilGuy from "./components/LilGuy";
+import Navbar from "./components/Navbar/Navbar";
+import Projects from "./components/Projects/Projects";
+import { useColorModeValue } from "./components/ui/color-mode";
 
 const App = () => {
   const text = useColorModeValue("Light", "Dark");

@@ -1,5 +1,6 @@
 import { Box, Stack, Text } from "@chakra-ui/react";
 import FreqGraphDisplay from "./FreqGraphDisplay";
+import ProjectList from "./ProjectList";
 
 const Projects = () => {
   return (
@@ -25,6 +26,7 @@ const Projects = () => {
           A visual representation of my projects, both personal and
           professional.
         </Text>
+        <ProjectList />
         <FreqGraphDisplay />
       </Stack>
     </Box>

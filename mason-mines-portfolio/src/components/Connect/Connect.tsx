@@ -5,6 +5,7 @@ import {
   BsLinkedin,
   BsAsterisk,
 } from "react-icons/bs";
+import { SiDevpost } from "react-icons/si";
 
 const contactLinks = [
   {
@@ -21,6 +22,11 @@ const contactLinks = [
     icon: BsLinkedin,
     href: "https://www.linkedin.com/in/masonmines2006",
     label: "LinkedIn",
+  },
+  {
+    icon: SiDevpost,
+    href: "https://devpost.com/MasonMines2006",
+    label: "Devpost",
   },
 ];
 

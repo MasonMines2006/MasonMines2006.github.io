@@ -22,6 +22,8 @@ const SkilsList = () => {
     "Tailwind CSS",
     "Vercel",
     "Node.js",
+    "cors",
+    "Express.js",
     "Streamlit",
     "Figma",
   ];

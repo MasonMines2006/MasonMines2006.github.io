@@ -17,7 +17,7 @@ const LilGuy = ({}: LilGuyProps) => {
       <Box>
         {action == "board" && (
           <Image
-            src="/public/PeepoPaper.png"
+            src="/PeepoPaper.png"
             alt="Lil Guy"
             width="100%"
             height="auto"
@@ -25,7 +25,7 @@ const LilGuy = ({}: LilGuyProps) => {
         )}
         {action == "writing" && (
           <Image
-            src="/public/PepeNotes.gif"
+            src="/PepeNotes.gif"
             alt="Lil Guy"
             width="100%"
             height="auto"
@@ -33,7 +33,7 @@ const LilGuy = ({}: LilGuyProps) => {
         )}
         {action == "sleeping" && (
           <Image
-            src="/public/PeepoSleeping.gif"
+            src="/PeepoSleeping.gif"
             alt="Lil Guy"
             width="100%"
             height="auto"
@@ -41,7 +41,7 @@ const LilGuy = ({}: LilGuyProps) => {
         )}
         {action == "tosleep" && (
           <Image
-            src="/public/PeepoToSleep.gif"
+            src="/PeepoToSleep.gif"
             alt="Lil Guy"
             width="100%"
             height="auto"
@@ -49,7 +49,7 @@ const LilGuy = ({}: LilGuyProps) => {
         )}
         {action == "idle" && (
           <Image
-            src="/public/PeepoIdle.gif"
+            src="/PeepoIdle.gif"
             alt="Lil Guy"
             width="100%"
             height="auto"

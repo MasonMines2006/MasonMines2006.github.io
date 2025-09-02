@@ -53,7 +53,11 @@ const AboutMe = () => {
           />
         </Box>
       </Stack>
-      <Text id="experiences" background={"bg"} color={"bg"}>
+      <Text
+        id="experiences"
+        background={"bg.emphasized"}
+        color={"bg.emphasized"}
+      >
         {" "}
         f
       </Text>

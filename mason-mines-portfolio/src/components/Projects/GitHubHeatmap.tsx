@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Box, SimpleGrid } from "@chakra-ui/react";
 import { Tooltip } from "@/components/ui/tooltip";
-import { type Day, fetchGitHubContributions } from "@/services/Github";
+import { type Day } from "@/services/Github";
 
 interface GitHubHeatmapProps {
   year: number;
@@ -10,14 +10,16 @@ interface GitHubHeatmapProps {
 
 const GitHubHeatmap = ({ year, username }: GitHubHeatmapProps) => {
   const [days, setDays] = useState<Day[]>([]);
-  const token = import.meta.env.VITE_GITHUB_TOKEN;
 
   useEffect(() => {
-    if (!token) return;
-    fetchGitHubContributions(token, year, username)
-      .then(setDays)
-      .catch((err) => console.error(err));
-  }, [token, year, username]);
+    fetch(`http://localhost:3000/github?year=${year}&username=${username}`)
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("GitHub data:", data); // <- see if you actually get contributions
+        setDays(data);
+      })
+      .catch(console.error);
+  }, [year, username]);
 
   return (
     <Box>

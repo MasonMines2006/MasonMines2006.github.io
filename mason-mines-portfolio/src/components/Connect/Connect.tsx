@@ -6,6 +6,41 @@ import {
   BsAsterisk,
 } from "react-icons/bs";
 
+const contactLinks = [
+  {
+    icon: BsMailbox2Flag,
+    href: "mailto:mmines@unc.edu",
+    label: "mmines@unc.edu",
+  },
+  {
+    icon: BsGithub,
+    href: "https://github.com/MasonMines2006",
+    label: "Github",
+  },
+  {
+    icon: BsLinkedin,
+    href: "https://www.linkedin.com/in/masonmines2006",
+    label: "LinkedIn",
+  },
+];
+
+const approachItems = [
+  {
+    title: "Curiosity",
+    description: "I love exploring new ideas and learning continuously.",
+  },
+  {
+    title: "Self-Driven",
+    description:
+      "I take initiative and ownership of projects from start to finish.",
+  },
+  {
+    title: "Collaboration",
+    description:
+      "I value teamwork and open communication to achieve the best results.",
+  },
+];
+
 const Connect = () => {
   return (
     <Stack align={"center"} spaceY={0} paddingTop={20} id="connect">
@@ -29,52 +64,23 @@ const Connect = () => {
             </Card.Title>
             <Card.Description as="div" alignContent="center" paddingBottom={10}>
               <Stack>
-                <Grid
-                  templateColumns="40px 1fr"
-                  templateRows="auto auto"
-                  gap={2}
-                >
-                  <Grid gridColumn="1" gridRow="1">
-                    <Link href="mailto:mmines@unc.edu">
-                      <Icon
-                        boxSize={6}
-                        as={BsMailbox2Flag}
-                        color="bg.inverted"
-                      />
-                    </Link>
+                {contactLinks.map(({ icon, href, label }) => (
+                  <Grid
+                    key={label}
+                    templateColumns="40px 1fr"
+                    templateRows="auto auto"
+                    gap={2}
+                  >
+                    <Grid gridColumn="1" gridRow="1">
+                      <Link href={href}>
+                        <Icon boxSize={6} as={icon} color="bg.inverted" />
+                      </Link>
+                    </Grid>
+                    <Grid gridColumn="2" gridRow="1">
+                      <Text textStyle="xl">{label}</Text>
+                    </Grid>
                   </Grid>
-                  <Grid gridColumn="2" gridRow="1">
-                    <Text textStyle="xl">mmines@unc.edu</Text>
-                  </Grid>
-                </Grid>
-                <Grid
-                  templateColumns="40px 1fr"
-                  templateRows="auto auto"
-                  gap={2}
-                >
-                  <Grid gridColumn="1" gridRow="1">
-                    <Link href="https://github.com/MasonMines2006">
-                      <Icon boxSize={6} as={BsGithub} color="bg.inverted" />
-                    </Link>
-                  </Grid>
-                  <Grid gridColumn="2" gridRow="1">
-                    <Text textStyle="xl">Github</Text>
-                  </Grid>
-                </Grid>
-                <Grid
-                  templateColumns="40px 1fr"
-                  templateRows="auto auto"
-                  gap={2}
-                >
-                  <Grid gridColumn="1" gridRow="1">
-                    <Link href="https://www.linkedin.com/in/masonmines2006">
-                      <Icon boxSize={6} as={BsLinkedin} color="bg.inverted" />
-                    </Link>
-                  </Grid>
-                  <Grid gridColumn="2" gridRow="1">
-                    <Text textStyle="xl">LinkedIn</Text>
-                  </Grid>
-                </Grid>
+                ))}
               </Stack>
             </Card.Description>
           </Card.Body>
@@ -91,65 +97,26 @@ const Connect = () => {
             </Card.Title>
             <Card.Description as="div" alignContent="center" paddingBottom={20}>
               <Stack>
-                <Grid
-                  templateColumns="40px 1fr"
-                  templateRows="auto auto"
-                  gap={0.5}
-                >
-                  <Grid gridColumn="1" gridRow="1">
-                    <Icon boxSize={6} as={BsAsterisk} color="bg.inverted" />
+                {approachItems.map(({ title, description }) => (
+                  <Grid
+                    key={title}
+                    templateColumns="40px 1fr"
+                    templateRows="auto auto"
+                    gap={0.5}
+                  >
+                    <Grid gridColumn="1" gridRow="1">
+                      <Icon boxSize={6} as={BsAsterisk} color="bg.inverted" />
+                    </Grid>
+                    <Grid gridColumn="2" gridRow="1">
+                      <Text textStyle="lg" color="bg.inverted">
+                        {title}
+                      </Text>
+                    </Grid>
+                    <Grid gridColumn="2" gridRow="2">
+                      <Text textStyle="lg">{description}</Text>
+                    </Grid>
                   </Grid>
-                  <Grid gridColumn="2" gridRow="1">
-                    <Text textStyle="lg" color="bg.inverted">
-                      Curiosity
-                    </Text>
-                  </Grid>
-                  <Grid gridColumn="2" gridRow="2">
-                    <Text textStyle="lg">
-                      I love exploring new ideas and learning continuously.
-                    </Text>
-                  </Grid>
-                </Grid>
-                <Grid
-                  templateColumns="40px 1fr"
-                  templateRows="auto auto"
-                  gap={0.5}
-                >
-                  <Grid gridColumn="1" gridRow="1">
-                    <Icon boxSize={6} as={BsAsterisk} color="bg.inverted" />
-                  </Grid>
-                  <Grid gridColumn="2" gridRow="1">
-                    <Text textStyle="lg" color="bg.inverted">
-                      Self-Driven
-                    </Text>
-                  </Grid>
-                  <Grid gridColumn="2" gridRow="2">
-                    <Text textStyle="lg">
-                      I take initiative and ownership of projects from start to
-                      finish.
-                    </Text>
-                  </Grid>
-                </Grid>
-                <Grid
-                  templateColumns="40px 1fr"
-                  templateRows="auto auto"
-                  gap={0.5}
-                >
-                  <Grid gridColumn="1" gridRow="1">
-                    <Icon boxSize={6} as={BsAsterisk} color="bg.inverted" />
-                  </Grid>
-                  <Grid gridColumn="2" gridRow="1">
-                    <Text textStyle="lg" color="bg.inverted">
-                      Collaboration
-                    </Text>
-                  </Grid>
-                  <Grid gridColumn="2" gridRow="2">
-                    <Text textStyle="lg">
-                      I value teamwork and open communication to achieve the
-                      best results.
-                    </Text>
-                  </Grid>
-                </Grid>
+                ))}
               </Stack>
             </Card.Description>
           </Card.Body>

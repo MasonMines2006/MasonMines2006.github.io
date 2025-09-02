@@ -7,9 +7,20 @@ dotenv.config();
 
 const app = express();
 
+const allowedOrigins = [
+  "https://masonmines2006.github.io/",  // replace with your deployed frontend URL
+  "http://localhost:5173"      // keep local dev
+];
+
 // Allow requests from your frontend (or * for all)
 app.use(cors({
-  origin: "http://localhost:5173", // your Vite dev server
+  origin: (origin, callback) => {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("CORS not allowed"));
+    }
+  }
 }));
 
 app.get("/github", async (req, res) => {
